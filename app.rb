@@ -1,10 +1,11 @@
 require 'sinatra'
+require 'pry'
 
 get '/' do
   erb :index
 end
 
 post '/' do
-  puts params.inspect
+  binding.pry
   redirect '/'
 end
