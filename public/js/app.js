@@ -14,7 +14,7 @@ $(function() {
         method: 'POST',
         contentType: 'application/json',
         dataType: 'json',
-        data: JSON.stringify({"pdf": "data:application/pdf;base64 " + btoa(event.target.result)})
+        data: JSON.stringify({"pdf": "data:application/pdf " + btoa(event.target.result)})
       })
     }
     reader.readAsBinaryString(pdf)
