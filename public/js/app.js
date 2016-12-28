@@ -8,15 +8,15 @@ $(function() {
     pdf = pdfInputNode.files[0];
     reader = new FileReader();
 
-    reader.onload = function(event){
-      $.ajax({
-        url: '/',
-        method: 'POST',
-        contentType: 'application/json',
-        dataType: 'json',
-        data: JSON.stringify({"pdf": "data:application/pdf " + btoa(event.target.result)})
-      })
-    }
-    reader.readAsBinaryString(pdf)
+    $.ajax({
+      url: '/',
+      method: 'POST',
+      contentType: 'application/json',
+      dataType: 'json',
+      data: JSON.stringify({"pdf": "data:application/pdf " + btoa(pdf)})
+    })
+    // reader.onload = function(event){
+    // }
+    // reader.readAsBinaryString(pdf)
   })
 })
