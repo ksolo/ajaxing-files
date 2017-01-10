@@ -1,6 +1,8 @@
 GEM
+  remote: https://rubygems.org/
   specs:
     coderay (1.1.1)
+    data_uri (0.1.0)
     method_source (0.8.2)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -20,8 +22,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  data_uri
   pry
   sinatra
 
 BUNDLED WITH
-   1.12.5
+   1.13.6
